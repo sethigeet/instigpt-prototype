@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "instigpt-prototype"
+version = "0.1.0"
+description = ""
+authors = ["Geet Sethi <geetsethi05@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+rich = "^13.6.0"
+python-dotenv = "^1.0.0"
+requests = "^2.31.0"
+streamlit = "^1.28.1"
+pathway = "^0.5.2"
+llm-app = "^0.3.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.10.1"
+pylint = "^3.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
