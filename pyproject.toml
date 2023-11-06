@@ -16,7 +16,8 @@ pathway = "^0.5.2"
 llm-app = "^0.3.1"
 pypdf = "^3.17.0"
 jsonlines = "^4.0.0"
-
+sentence-transformers = "^2.2.2"
+torch = ">=2.0.0, !=2.0.1, !=2.1.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.10.1"
