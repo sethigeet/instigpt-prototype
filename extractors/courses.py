@@ -2,6 +2,7 @@ import json
 from requests import Session
 from requests.sessions import RequestsCookieJar
 from rich.progress import track, Progress, SpinnerColumn, TimeElapsedColumn, TextColumn
+from rich import print
 
 from . import RESOBIN_SESSIONID
 
@@ -40,7 +41,6 @@ for course in track(data["results"], description="Processing data", transient=Tr
         }
     )
 
-with open("./data/courses.json", "w") as f:
+print("Writing extracted text to [bold]'./extracted_data/courses.json'")
+with open("./extracted_data/courses.json", "w") as f:
     json.dump(extracted_data, f)
-
-print("[green]Successfully extracted data!")
