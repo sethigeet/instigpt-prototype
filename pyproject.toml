@@ -15,6 +15,7 @@ streamlit = "^1.28.1"
 pathway = "^0.5.2"
 llm-app = "^0.3.1"
 pypdf = "^3.17.0"
+jsonlines = "^4.0.0"
 
 
 [tool.poetry.group.dev.dependencies]

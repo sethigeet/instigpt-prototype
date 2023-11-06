@@ -1,4 +1,5 @@
 import json
+import jsonlines
 from requests import Session
 from requests.sessions import RequestsCookieJar
 from rich.progress import track, Progress, SpinnerColumn, TimeElapsedColumn, TextColumn
@@ -41,6 +42,6 @@ for course in track(data["results"], description="Processing data", transient=Tr
         }
     )
 
-print("Writing extracted text to [bold]'./extracted_data/courses.json'")
-with open("./extracted_data/courses.json", "w") as f:
-    json.dump(extracted_data, f)
+print("Writing extracted text to [bold]'./extracted_data/courses.jsonl'")
+with jsonlines.open("./extracted_data/courses.jsonl", "w") as w:
+    w.write_all(extracted_data)

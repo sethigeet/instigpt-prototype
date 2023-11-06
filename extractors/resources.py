@@ -1,3 +1,4 @@
+import jsonlines
 import json
 import sys
 from requests import Session
@@ -45,6 +46,6 @@ for resource in track(data, description="Processing data", transient=True):
         }
     )
 
-print(f"Writing extracted text to [bold]'./extracted_data/resources_{COURSE}.json'")
-with open(f"./extracted_data/resources_{COURSE}.json", "w") as f:
-    json.dump(extracted_data, f)
+print(f"Writing extracted text to [bold]'./extracted_data/resources_{COURSE}.jsonl'")
+with jsonlines.open(f"./extracted_data/resources_{COURSE}.jsonl", "w") as w:
+    w.write_all(extracted_data)

@@ -1,4 +1,5 @@
 import re
+import jsonlines
 import json
 from pathlib import Path
 from pypdf import PdfReader
@@ -44,6 +45,6 @@ for i in track(
     end = start_indexes[i + 1]
     extracted_data.append({"doc": contents[start:end]})
 
-print(f"Writing extracted text to [bold]'./extracted_data/rulebook.json'")
-with open("./extracted_data/rulebook.json", "w") as file:
-    json.dump(extracted_data, file)
+print(f"Writing extracted text to [bold]'./extracted_data/rulebook.jsonl'")
+with jsonlines.open("./extracted_data/rulebook.jsonl", "w") as w:
+    w.write_all(extracted_data)
