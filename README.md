@@ -1,10 +1,10 @@
 # InstiGPT Prototype
 
-This prototype is for a ChatGPT like AI assistent for the students at IIT Bombay. It can help students find information more easily and help them in day to day tasks such as getting previous years question papers for a particular course, get the reviews about a particular course, see who is teaching a particular course, and many more things!
+This prototype is for a ChatGPT-like AI assistant for the students at IIT Bombay. It can help students find information more easily and help them in day to day tasks such as getting previous year question papers for a particular course, getting reviews about a particular course, seeing who is teaching a particular course, and many more things!
 
 ## Running the application
 
-> NOTE: You many choose to create a virtual environment.
+> NOTE: You may choose to create a virtual environment.
 
 1. Install the dependencies using `pip install -r requirements.txt`
 1. Run the API using `python main.py`
@@ -19,10 +19,10 @@ This prototype is for a ChatGPT like AI assistent for the students at IIT Bombay
 
 ## Why it was created?
 
-This project aims to assist students at colleges by simplifying everyday tasks for them and helping them find information which is not easily available to them. It will also make the information concise and provide it in a more efficient manner.
+This project aims to assist college students by simplifying everyday tasks and helping them find information that is not easily available. It will also make the information concise and provide it more efficiently.
 
 ## Technical Details
 
 - This app uses RAG to incorporate information from many sources with live updates.
-- It uses [pathway](https://github.com/pathwaycom/pathway) and [LLMApp](https://github.com/pathwaycom/llm-app) to process live data, generate embeddings and generating text from LLMs.
-- It offers a good looking UI built using streamlit.
+- It uses [pathway](https://github.com/pathwaycom/pathway) and [LLMApp](https://github.com/pathwaycom/llm-app) to process live data, generate embeddings and generate text from LLMs.
+- It offers a good-looking UI built using streamlit.
